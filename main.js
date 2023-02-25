@@ -30,6 +30,15 @@ function newPeerConnection() {
   return pc;
 }
 
+// za multi
+function handleConnection(peer) {
+  console.log("New user connected with ID: " + peer.id);
+  const call = peer.call(peer.id, localStream);
+  call.on("stream", (remoteStream) => {
+    addVideoStream(remoteStream, peer.id);
+  });
+}
+
 // Početna funkcija koja traži dopuštenje za pristup kameri
 async function start() {
   try {
