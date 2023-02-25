@@ -1,0 +1,136 @@
+/* Postavke boja */
+:root {
+    --primary-color: #1c1c1c;
+    --secondary-color: #2f2f2f;
+    --accent-color: #8c1eff;
+    --text-color: #fff;
+  }
+  
+  /* Opće postavke */
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Zaglavlje */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-radius: 16px;
+    margin: 32px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    margin: 0;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .header button {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header button:hover {
+    background-color: #6a1b9a;
+  }
+  
+  /* Glavni sadržaj */
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -64px;
+    border-radius: 16px;
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .main video {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  
+  .main button {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .main button:hover {
+    background-color: #6a1b9a;
+  }
+  
+  /* Poruke čavrljanja */
+  .messages {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 32px;
+    width: 100%;
+    max-width: 640px;
+  }
+  
+  .message {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 16px;
+    max-width: 80%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .message p {
+    margin: 0;
+    padding: 
+   0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .message span {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+  
+  .message.user-message {
+    align-self: flex-end;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+  }
+  
